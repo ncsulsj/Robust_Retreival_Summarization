@@ -19,7 +19,7 @@ The system is structured into distinct components to streamline the process of g
 
 ## Data and Model Weights
 
-You could access our generated training and test datasets through the supplementary material. 
+You could access our generated training and test datasets through the supplementary material. Our trained LoRA model weights is larger than 84MB, which exceeds the size limit. One can reproduce our model weights through the `train.py` in the `model_training` directory by specifying the training data location.
 
 (To generate the synthetic data, you also need to store OPENAI_API_KEY in a `.env` file in the `data_generation` directory)
 
@@ -60,9 +60,3 @@ To utilize our model for different use cases, consider the following prompts:
   Use the function, inference_template_s7, located in model_validation/llm_utils.py, the input argument is user's topic, all the retrieval texts as a python list of string and the lora repo.
   ```
   The above function will directly return you with the final summarization.
-
-## API Integration 
-
-Our model is also integrating our custom [text mining API](https://www.csc2.ncsu.edu/faculty/healey/social-media-viz/production/). If the retrieval text is not relevant with your topic, then you 
-could ask our model `Could you find the online news regarding xx and tell me how people think about it? `. Our model will return the API name and its argument. You could write a webscraped based on the XML of the API to connect. 
-
