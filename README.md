@@ -19,7 +19,7 @@ The system is structured into distinct components to streamline the process of g
 
 ## Data and Model Weights
 
-You could access our generated training and test datasets through the supplementary material. Our trained LoRA model weights is larger than 84MB, which exceeds the size limit. One can reproduce our model weights through the `train.py` in the `model_training` directory by specifying the training data location (will also be provided if requested).
+You could access our generated training and test datasets through the supplementary material. Our trained LoRA model weights is larger than 84MB, which exceeds the size limit (It will be also provided if requested). One can reproduce our model weights through the `train.py` in the `model_training` directory by specifying the training data location .
 
 (To generate the synthetic data, you also need to store OPENAI_API_KEY in a `.env` file in the `data_generation` directory)
 
