@@ -19,11 +19,9 @@ The system is structured into distinct components to streamline the process of g
 
 ## Data and Model Weights
 
-Access our meticulously generated training and validation datasets, along with the LoRA model weights, at the following locations:
-- Training and Validation Data: [Hugging Face Datasets](https://huggingface.co/datasets/zycjlsj123/ragsummdata)
-- Model Weights: [LoRA Model Weights](https://huggingface.co/zycjlsj123/rag_summ)
+You could access our generated training and test datasets through the supplementary material. 
 
-(To generate the synthetic data, you also need to store OPENAI_API_KEY in a .env file)
+(To generate the synthetic data, you also need to store OPENAI_API_KEY in a `.env` file in the `data_generation` directory)
 
 ## Model Functionality
 
