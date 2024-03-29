@@ -6,9 +6,10 @@ Welcome to the official repository for **Towards a Robust Retrieval-Based Summar
 
 The system is structured into distinct components to streamline the process of generating data, training the model, and evaluating performance. Specifically, it includes:
 
-- **Data Generation**: Utilizing **SummRAG** to create datasets. (See `data_generation` directory)
-- **Model Training**: Instructions on training the Mistral 7B instruct v0.1 model with LoRA on our curated datasets. (Located in `model_training` directory)
-- **Model Evaluation**: How to assess the model's performance using **LogicSumm**. (Found in `model_validation` directory)
+- **Data Generation**: Utilizing **SummRAG** to create datasets. (See `create_data.py` in `data_generation` directory)
+- **Model Training**: Instructions on training the Mistral 7B instruct v0.1 model with LoRA on our curated datasets. (Located in see
+  ` train.py` in `model_training` directory)
+- **Model Evaluation**: How to assess the model's performance using **LogicSumm**. (see `evaluate_multi_docs.py` and `evaluate_single_doc.py` in `model_validation` directory)
 
 ## Contents
 
