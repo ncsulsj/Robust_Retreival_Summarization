@@ -16,7 +16,6 @@ The system is structured into distinct components to streamline the process of g
 1. [Data and Model Weights](#data-and-model-weights)
 2. [Model Functionality](#model-functionality)
 3. [Example Inference](#example-inference)
-4. [API Integration](#api-integration)
 
 ## Data and Model Weights
 
