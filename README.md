@@ -12,8 +12,8 @@ The system is structured into distinct components of Guardian Framework. Specifi
 
 ## Contents
 
-1. [How to generate synthetic dialogue](#generate-synthetic-dialogue)
-2. [Guardian code structure](#model-structure)
+1. [Generate synthetic dialogue](#generate-synthetic-dialogue)
+2. [Guardian code structure](#Guardian-code-structure)
 3. [Traning job](#training-job)
 
 ## How to generate synthetic dialogue
