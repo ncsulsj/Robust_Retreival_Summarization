@@ -12,7 +12,7 @@ The system is structured into distinct components of Guardian Framework. Specifi
 
 ## Contents
 
-1. [Generate synthetic dialogue](#generate-synthetic-dialogue)
+1. [Generate synthetic dialogue](#Generate-synthetic-dialogue)
 2. [Guardian code structure](#Guardian-code-structure)
 3. [Traning job](#training-job)
 
