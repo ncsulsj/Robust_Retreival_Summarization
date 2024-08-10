@@ -18,9 +18,7 @@ The system is structured into distinct components of Guardian Framework. Specifi
 
 ## How to generate synthetic dialogue
 
-You could access our generated training and test datasets through the supplementary material. Our trained LoRA model weights is larger than 84MB, which exceeds the size limit (It will be also provided if requested). One can reproduce our model weights through the `train.py` in the `model_training` directory by specifying the training data location .
-
-(To generate the synthetic data, you also need to store OPENAI_API_KEY in a `.env` file in the `data_generation` directory)
+To generate synthetic dialogue to understand SOP, SOP reasoning, robustness, etc.. through Claude 3, all SOPs need to put under `sop_image` folder. After this step, run `generate_image_multiple.py` to automatically parse SOPs into images. Given access to Claude 3 and all arguments, run `data_creation.py` for synthetic dialogue generation.
 
 ## Guardian code structure
 
