@@ -6,23 +6,23 @@ Welcome to the official repository for **Guardian**. This repository hosts the o
 
 The system is structured into distinct components of Guardian Framework. Specifically, it includes:
 
-- **Synthetic Dialogue Generation**: Utilizing **prompts** together with **Claude 3** to create datasets. (See `configs` directory for prompts)
-- **Model Training**: Training Job on how to train Guardian. (Located in `Guardian_training_job` directory)
+- **Synthetic Dialogue Generation**: Utilizing **prompts** together with **Claude 3** to create datasets to help Guardian in SOP understanding, reasoning, robustness, etc... (See `configs` directory for prompts)
+- **Model Training**: Training Job to train Guardian. (Located in `Guardian_training_job` directory)
 
 
 ## Contents
 
-1. [Data and Model Weights](#data-and-model-weights)
-2. [Model Functionality](#model-functionality)
-3. [Example Inference](#example-inference)
+1. [How to generate synthetic dialogue](#generate-synthetic-dialogue)
+2. [Guardian code structure](#model-structure)
+3. [Traning job](#training-job)
 
-## Data and Model Weights
+## How to generate synthetic dialogue
 
 You could access our generated training and test datasets through the supplementary material. Our trained LoRA model weights is larger than 84MB, which exceeds the size limit (It will be also provided if requested). One can reproduce our model weights through the `train.py` in the `model_training` directory by specifying the training data location .
 
 (To generate the synthetic data, you also need to store OPENAI_API_KEY in a `.env` file in the `data_generation` directory)
 
-## Model Functionality
+## Guardian code structure
 
 Our model is fine-tuned for various summarization tasks:
 1. **Topic-based Text Retrieval and Summarization**: Capable of identifying the relevancy of retrieval text to a user-defined topic (not only the topic but also the subtopic. i.e. ChatGPT application in Finance is not relevant with ChatGPT introduction or application in Education)
@@ -30,7 +30,7 @@ Our model is fine-tuned for various summarization tasks:
 3. **Enhanced Summarization with Supplementary Text**: Identifies and integrates relevant supplementary texts with the original content for comprehensive summarization (also takes care of the case of different subtopic). It also can identify information conflict between them.
 4. **Multi-documents Summarization**: Efficiently summarizes multiple documents, filtering out irrelevant content for coherent summaries.
 
-## Example Inference
+## Training job
 
 To utilize our model for different use cases, consider the following prompts:
 
