@@ -1,15 +1,14 @@
-# Towards a Robust Retrieval-Based Summarization System
+# Guardian - Unified Multi Modality LLM for Returns Abuse Prevention
 
-Welcome to the official repository for **Towards a Robust Retrieval-Based Summarization System**. This repository hosts the original implementation of our robust system designed to enhance retrieval-based summarization processes.
+Welcome to the official repository for **Guardian**. This repository hosts the original implementation of our unified Multi-Modaltiy LLM for Returns Abuse Prevention.
 
 ## Overview
 
-The system is structured into distinct components to streamline the process of generating data, training the model, and evaluating performance. Specifically, it includes:
+The system is structured into distinct components of Guardian Framework. Specifically, it includes:
 
-- **Data Generation**: Utilizing **SummRAG** to create datasets. (See `create_data.py` in `data_generation` directory)
-- **Model Training**: Instructions on training the Mistral 7B instruct v0.1 model with LoRA on our curated datasets. (Located in see
-  ` train.py` in `model_training` directory)
-- **Model Evaluation**: How to assess the model's performance using **LogicSumm**. (see `evaluate_multi_docs.py` and `evaluate_single_doc.py` in `model_validation` directory)
+- **Synthetic Dialogue Generation**: Utilizing **prompts** together with **Claude 3** to create datasets. (See `configs` directory for prompts)
+- **Model Training**: Training Job on how to train Guardian. (Located in `Guardian_training_job` directory)
+
 
 ## Contents
 
