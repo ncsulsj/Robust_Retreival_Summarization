@@ -23,35 +23,13 @@ To generate synthetic dialogue to understand SOP, SOP reasoning, robustness, etc
 ## Guardian code structure
 
 Guardian has following code structure in `Guardian_training_job/src/Guardian_config_and_code/scripts` directory:
-1. **moe_projector.py**: It consists of the implementation of SparseMoE and QFormer projector.
-2. **modeling.py**: Main implementation of Guardian by following HuggingFace Model Template. 
+1. `moe_projector.py`: It consists of the implementation of SparseMoE and QFormer projector.
+2. `modeling.py`: Main implementation of Guardian by following HuggingFace Model Template. 
 
 ## Training job
 
-To utilize our model for different use cases, consider the following prompts:
+To train Guardian through training job, one needs to pay attention to following files:
 
-- **For Topic-based Summarization**:
-  ```
-  [INST] You are a summarization assistant to retrieve the text based on user's topic and then do the summarization. Hi, could you provide a summary of xxx ? [/INST] Here is the retrieval text: Start of the retrieval text: xxx End of the retrieval text.
-  ```
-- **For Direct Text Summarization**:
-  ```
-  [INST] You are a summarization assistant to do the summarization based on user's text. Hi, could you provide a summary of this text regarding xxx? [/INST] 
-  ```
-  The model usually returns you `Sure, could you provide the text?`. Then you could reply
-  ```
-  [INST] Your text [/INST] Here is the retrieval text: Start of the retrieval text: xxx End of the retrieval text. 
-  ```
-- **Enhanced Text Summarization**:
-  ```
-  [INST] You are a summarization assistant to decide if combining the retrieval text with user's text to do the summarization based on its relevancy. Hi, could you summarize the following text for me?
-  Besides, could you also check retrieve some related text and see if it can improve the summarization and also check the information conflict? [/INST]
-  ```
-  The model usually returns you `Sure, could you provide the text?`. Then you could reply
-  ```
-  [INST] Your text [/INST] Here is the retrieval text: Start of the retrieval text: xxx End of the retrieval text.
-- **Multi-documents Summarization**:
-  ```
-  Use the function, inference_template_s7, located in model_validation/llm_utils.py, the input argument is user's topic, all the retrieval texts as a python list of string and the lora repo.
-  ```
-  The above function will directly return you with the final summarization.
+1. `Guardian_training_job/src/Guardian_config_and_code/scripts/run_multinode_deepspeed.py`: This script trains Guardian with QLoRA with Deepspeed stage 3 for single node/multiple nodes.
+2. `Guardian_training_job/src/Guardian_config_and_code/scripts/torch_launch.sh`: This shell script file launch Guardian training through  `torchrun` command.
+3. `Guardian_training_job/src/start.py`: Entry point for the Guardian Training with specifying certain SageMaker environment variable such as Master Address...
