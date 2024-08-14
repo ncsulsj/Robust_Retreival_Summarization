@@ -1,20 +1,21 @@
-# Guardian - Unified Multi Modality LLM for Returns Abuse Prevention
+# Diffusion Based for Sequence Anomaly Detection
 
-Welcome to the official repository for **Guardian**. This repository hosts the original implementation of our unified Multi-Modaltiy LLM for Returns Abuse Prevention.
+Welcome to the official repository for **Diffusion Based for Sequence Anomaly Detection**. This repository hosts the original implementation of our sequence anomaly detection model.
 
 ## Overview
 
-The system is structured into distinct components of Guardian Framework. Specifically, it includes:
+The system is structured into distinct components. Specifically, it includes:
 
-- **Synthetic Dialogue Generation**: Utilizing **prompts** together with **Claude 3** to create datasets to help Guardian in SOP understanding, reasoning, robustness, etc... (See `configs` directory for prompts)
-- **Model Training**: Training Job to train Guardian. (Located in `Guardian_training_job` directory)
+- **TSA_training**: TSA baseline embedding algorithm for modeling the ShipTrack Sequence
+- **LLM_SimCSE**: SimCSE algorithm to finetune nomic embedding to adapt to ShipTrack domain
+- **DTE**: Diffusion time estimation model training for anomaly detection.
 
 
 ## Contents
 
-1. [Generate synthetic dialogue](#Generate-synthetic-dialogue)
-2. [Guardian code structure](#Guardian-code-structure)
-3. [Traning job](#training-job)
+1. [TSA training](#TSA-training)
+2. [LLM_SimCSE](#LLM-SimCSE)
+3. [DTE](#DTE)
 
 ## How to generate synthetic dialogue
 
