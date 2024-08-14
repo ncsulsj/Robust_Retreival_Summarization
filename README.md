@@ -17,20 +17,14 @@ The system is structured into distinct components. Specifically, it includes:
 2. [LLM_SimCSE](#LLM-SimCSE)
 3. [DTE](#DTE)
 
-## How to generate synthetic dialogue
+## TSA training
 
-To generate synthetic dialogue to understand SOP, SOP reasoning, robustness, etc.. through Claude 3, all SOPs need to put under `sop_image` folder. After this step, run `generate_image_multiple.py` to automatically parse SOPs into images. Given access to Claude 3 and all arguments, run `data_creation.py` for synthetic dialogue generation.
+This directory includes the code to train the TSA on the ShipTrack sequence through PyTorch Lightning
 
-## Guardian code structure
+## LLM_SimCSE
 
-Guardian has following code structure in `Guardian_training_job/src/Guardian_config_and_code/scripts` directory:
-1. `moe_projector.py`: It consists of the implementation of SparseMoE and QFormer projector.
-2. `modeling.py`: Main implementation of Guardian by following HuggingFace Model Template. 
+This directory includes the code to use SentenceTransformer to finetune Nomic on the ShipTrack sequence after text transformation.
 
-## Training job
+## DTE
 
-To train Guardian through training job, one needs to pay attention to following files:
-
-1. `Guardian_training_job/src/Guardian_config_and_code/scripts/run_multinode_deepspeed.py`: This script trains Guardian with QLoRA with Deepspeed stage 3 for single node/multiple nodes.
-2. `Guardian_training_job/src/Guardian_config_and_code/scripts/torch_launch.sh`: This shell script file launch Guardian training through  `torchrun` command.
-3. `Guardian_training_job/src/start.py`: Entry point for the Guardian Training with specifying certain SageMaker environment variable such as Master Address...
+This directory includes the code to train our main anomaly detection algorithm - DTE and other baseline algorithms such as DDPM.
